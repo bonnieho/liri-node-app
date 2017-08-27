@@ -1,0 +1,112 @@
+/* These are the custom styles for a class project Language Interpreter Bot created in Javascript and Node.js
+Author: Bonnie L. Hoffman - bonnieho@rice.edu */
+
+/* Liri Bot */
+
+
+
+body {
+	font-family: arial, helvetica, sans-serif;
+	color: #999;
+}
+
+/* main div to hold the children together  */
+#main {
+	width: 65%;
+	margin: auto;
+}
+
+
+h1 {
+	font-size: 120%;
+	margin: 24px;
+	text-align: center;
+}
+
+
+h2 {
+	font-size: 110%;
+	margin: 20px;
+	padding: 24px;
+	text-align: center;
+}
+
+
+h3 {
+	font-size: 100%;
+	margin: 24px;
+	margin-left: 30%;
+}
+
+.ital {
+	font-style: italic;
+}
+
+/*
+.instructions {
+	width: 50%;
+	font-size: 80%;
+	font-style: italic;
+	margin: auto;
+	padding:16px 24px;
+	border: solid 1px #999;
+}
+
+.instructions p {
+	margin: 8px 0;
+}
+
+.number-box {
+	width: 30%;
+	font-size: 80%;
+	border: solid 2px #7f3dbd;
+	color: #7f3dbd;
+	margin: auto;
+
+}
+
+.target {
+	background-color: rgba(127, 61, 189, 0.36);
+
+}
+
+.mynum{
+	background-color: rgba(189, 61, 165, 0.36);
+	color: #bd3da5;
+}
+
+
+#win-loss-box {
+	width: 20%;
+	border: solid 2px #7f3dbd;
+	margin: auto;
+}
+
+
+
+.wins {
+	background-color: rgba(116, 189, 61, 0.35);
+	border: solid 2px #74bd3d;
+	color: #74bd3d;
+	padding: 12px;
+}
+
+.losses {
+	background-color: rgba(189, 61, 61, 0.35);
+	border: solid 2px #bd3d3d;
+	color: #bd3d3d;
+	padding: 12px;
+}
+
+#btn-parent {
+	width: 50%;
+	padding: 12px;
+	margin: auto;
+}
+
+#wincount {
+	text-align: center;
+}
+
+*/
+
