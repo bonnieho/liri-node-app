@@ -22,6 +22,7 @@ var nodeArgs = process.argv;
 
 /* What Each Command Should Do
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. node liri.js my-tweets
 
@@ -31,52 +32,110 @@ function show20Tweets(){
   console.log("I'm showing my tweets");
 }
 
+
+
+
+/*   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+2. node liri.js spotify-this-song '<song name here>'
+
+  This will show the following information about the song in your terminal/bash window
+    Artist(s)
+    The song's name
+    A preview link of the song from Spotify The album that the song is from
+
+  if no song is provided then your program will default to "The Sign" by Ace of Base
+
+*/
+
+
+
 function showSongInfo(songName){
   // console.log("I'm showing song information for " + songName);
   
   var spotify = new Spotify(keys.spotifyKeys);
 
+    // checking to see if NO song name entered
     if(!songName) {
       //  songName = "The Sign"
       spotify
         .request('https://api.spotify.com/v1/tracks/0hrBpAOgrt8RXigk83LLNE')
         .then(function(data) {
-          console.log(data.artists[0].name);
-          console.log(data.name);
-          console.log(data.preview_url);
-          console.log(data.album.name); 
+          console.log('Since you didn\'t specify a song title, then you\'re stuck with this one:')
+          console.log('Artist: ' + data.artists[0].name);
+          console.log('Title: ' + data.name);
+          console.log('Song URL: ' + data.preview_url);
+          console.log('Album: ' + data.album.name); 
         })
         .catch(function(err) {
           console.error('Error occurred: ' + err); 
         });
+
     } else {
-   
+      // search based on song name entered
+
       spotify.search({ type: 'track', query: songName, limit: 1}, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
         }
 
         // this just gives me more info than I need
-        console.log(JSON.stringify(data)); 
+        //console.log(JSON.stringify(data)); 
 
-      
-
+        // iterating to display all in case of multiple artists
         for(var i=0; i<data.tracks.items[0].artists.length; i++) {
-          console.log(data.tracks.items[0].artists[i].name);
+          console.log('Artist(s): ' + data.tracks.items[0].artists[i].name);
         ;}
 
-        console.log(data.tracks.items[0].name);
+        // song title
+        console.log('Title: ' + data.tracks.items[0].name);
+        
+        // Since not all of the songs have a preview URL, then check for the absence of one and return a custom message
+        var url = data.tracks.items[0].preview_url;
+        if (url) {
+          console.log('Song URL: ' + data.tracks.items[0].preview_url);
+        } else {
+          console.log('(This song does not appear to have a URL in Spotify!)')
+        }
 
-        console.log(data.tracks.items[0].preview_url);
-
-        console.log(data.tracks.items[0].album.name);
+        // song's album
+        console.log('Album: ' + data.tracks.items[0].album.name);
       });
     }
 }
 
+
+
+
+
+/*   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+3. node liri.js movie-this '<movie name here>'
+
+  This will output the following information to your terminal/bash window:
+    * Title of the movie.
+    * Year the movie came out.
+    * IMDB Rating of the movie.
+    * Country where the movie was produced. * Language of the movie.
+    * Plot of the movie.
+    * Actors in the movie.
+    * Rotten Tomatoes URL.
+
+  If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
+    If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/ 
+    It's on Netflix!
+*/
+
 function showMovieInfo(movieName){
   console.log("I'm showing movie information for " + movieName);
 }
+
+
+
+
+
+//  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// function to piece it all together and run functions depending on the command given
 
 function doWhatItSays(command, args){
   if (command === 'my-tweets'){
@@ -90,39 +149,39 @@ function doWhatItSays(command, args){
   }
 }
 
+  /*   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    4. node liri.js do-what-it-says
+    Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands
+    It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt .
+    Feel free to change the text in that document to test out the feature for other commands
+  */
+
 if(nodeArgs[2] === 'do-what-it-says') {
+  fs.readFile("random.txt", "utf8", function(error, data) {
+
+    // If the code experiences any errors it will log the error to the console.
+    if (error) {
+      return console.log(error);
+    }
+
+    var infoRead = data.split(',');
+    // We will then print the contents of data
+    return doWhatItSays(infoRead[0], infoRead[1]);
+  });
 
 } else {
   doWhatItSays(nodeArgs[2], nodeArgs[3]);
 }
 
-/*
-2. node liri.js spotify-this-song '<song name here>'
-
-	This will show the following information about the song in your terminal/bash window
-		Artist(s)
-		The song's name
-		A preview link of the song from Spotify The album that the song is from
-
-	if no song is provided then your program will default to "The Sign" by Ace of Base
 
 
 
-3. node liri.js movie-this '<movie name here>'
 
-	This will output the following information to your terminal/bash window:
-		* Title of the movie.
-		* Year the movie came out.
-		* IMDB Rating of the movie.
-		* Country where the movie was produced. * Language of the movie.
-		* Plot of the movie.
-		* Actors in the movie.
-		* Rotten Tomatoes URL.
 
-	If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
-		If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/ 
-		It's on Netflix!
-*/
+
+/*   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+OLD STUFF TO DRAW FROM
 
 /*
 // Store all of the arguments in an array
@@ -165,12 +224,10 @@ request(queryUrl, function(error, response, body) {
   }
 });
 */
-/*
-4. node liri.js do-what-it-says
-	Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands
-		It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt .
-		Feel free to change the text in that document to test out the feature for other commands
-*/
+
+
+
+
 // This block of code will read from the "random.txt" file.
 // It's important to include the "utf8" parameter or the code will provide stream data (garbage)
 // The code will store the contents of the reading inside the variable "data"
