@@ -9,9 +9,10 @@ var keys = require('./keys.js');
 var fs = require("fs");
 
 
-var twitter = require("twitter");
+var Twitter = require("twitter");
 var Spotify = require("node-spotify-api");
 var request = require("request");
+var imdb = require("imdb-api");
 
 // Store all of the arguments in an array
 var nodeArgs = process.argv;
@@ -30,6 +31,26 @@ var nodeArgs = process.argv;
 */
 function show20Tweets(){
   console.log("I'm showing my tweets");
+   /* try {
+            List<Status> statuses;
+            // String user;
+            user = "Q_Michauxii";
+            statuses = twitter.getUserTimeline(user);
+            Log.i("Status Count", statuses.size() + " Feeds");
+            for (var i = 0; i < 20; i++) {
+                // Status status = statuses.get(i);
+                Log.i("Tweet Count " + (i + 1), status.getText() + "\n\n");
+            }
+        } catch (TwitterException te) {
+            te.printStackTrace();
+         }
+         */
+         var params = {screen_name: 'Q_Michauxii'};
+          client.get('statuses/user_timeline', params, function(error, tweets, response) {
+          if (!error) {
+            console.log(tweets);
+          }
+        });
 }
 
 
@@ -116,7 +137,8 @@ function showSongInfo(songName){
     * Title of the movie.
     * Year the movie came out.
     * IMDB Rating of the movie.
-    * Country where the movie was produced. * Language of the movie.
+    * Country where the movie was produced. 
+    * Language of the movie.
     * Plot of the movie.
     * Actors in the movie.
     * Rotten Tomatoes URL.
@@ -127,11 +149,72 @@ function showSongInfo(songName){
 */
 
 function showMovieInfo(movieName){
-  console.log("I'm showing movie information for " + movieName);
+  // just to make sure this is running
+  // console.log("I'm showing movie information for " + movieName);
+
+  
+  // Store all of the arguments in an array
+  var nodeArgs = process.argv;
+  
+
+  // Create an empty variable for holding the movie name
+  var movieName = "";
+
+  // checking to see if NO movie name entered
+  if(!movieName) {
+    //  movieName = "Mr. Nobody"
+    movieName = "Mr. Nobody";
+    console.log('Since you didn\'t specify a movie title, then you\'re stuck with this one:')
+
+  } else {
+    // search based on movie name entered
+
+    // Loop through all the words in the node argument
+    // And do a little for-loop magic to handle the inclusion of "+"s
+    for (var i = 3; i < nodeArgs.length; i++) {
+
+      if (i > 3 && i < nodeArgs.length) {
+
+        movieName = movieName + "+" + nodeArgs[i];
+
+      }
+
+      else {
+
+        movieName += nodeArgs[i];
+
+      }
+    }
+  }
+
+  // Then run a request to the OMDB API with the movie specified
+  var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&tomatoes=true&r=json&apikey=40e9cece";
+
+  // This line is just to help us debug against the actual URL.
+  // console.log(queryUrl);
+
+
+
+  request(queryUrl, function(error, response, body) {
+
+    // If the request is successful
+    if (!error && response.statusCode === 200) {
+
+      // Parse the body of the site and recover just the imdbRating
+      // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
+      console.log("Movie Title: " + JSON.parse(body).Title);
+      console.log("Release Year: " + JSON.parse(body).Year);
+      console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
+      console.log("Country of Origin: " + JSON.parse(body).Country);
+      console.log("Language: " + JSON.parse(body).Language);
+      console.log("Plot: " + JSON.parse(body).Plot);
+      console.log("Actors: " + JSON.parse(body).Actors);
+      console.log("Rotten Tomatoes URL: " + JSON.parse(body).tomatoURL);
+    }
+
+  });
+
 }
-
-
-
 
 
 //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
