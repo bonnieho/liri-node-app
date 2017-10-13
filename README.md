@@ -55,7 +55,7 @@ If no song is provided, then your program will default to
 ![Screenshot of Liri spotify-this-song NULL](screenshots/03_liri_spotify-this-song_NULL.png)  
 
 
-### 3. `node liri.js movie-this *'movie name here'*`
+### 3. `node liri.js movie-this '`*movie name here*`'`
 
 This will output the following information to your terminal/bash window:
 
