@@ -216,7 +216,7 @@ function doWhatItSays(command, args){
   } else if (command === 'movie-this') {
     showMovieInfo(args);
   } else {
-    console.log('this is an error');
+    console.log('This is an error.\r\n \r\nPlease enter: \r\n \r\nmy-tweets, \r\nspotify-this-song, \r\nmovie-this, or \r\ndo-what-it-says\r\n \r\nfollowing the liri.js command. \r\n');
   }
 }
 
