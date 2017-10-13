@@ -39,7 +39,7 @@ _(This example uses a Twitter account - QMichauxii - created for this exercise. 
 
 
 
-### 2. `node liri.js spotify-this-song *'song name here'*`
+### 2. `node liri.js spotify-this-song '`*song name here*`'`
 
 This will show the following information about the song in your terminal/bash window:
   * Artist(s)
