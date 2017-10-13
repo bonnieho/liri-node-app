@@ -39,7 +39,7 @@ _(This example uses a Twitter account - QMichauxii - created for this exercise. 
 
 
 
-### 2. `node liri.js spotify-this-song _'song name here'_`
+### 2. `node liri.js spotify-this-song *'song name here'*`
 
 This will show the following information about the song in your terminal/bash window:
   * Artist(s)
@@ -55,7 +55,7 @@ If no song is provided, then your program will default to
 ![Screenshot of Liri spotify-this-song NULL](screenshots/03_liri_spotify-this-song_NULL.png)  
 
 
-### 3. `node liri.js movie-this _'movie name here'_`
+### 3. `node liri.js movie-this *'movie name here'*`
 
 This will output the following information to your terminal/bash window:
 
