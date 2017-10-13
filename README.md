@@ -28,7 +28,7 @@ function doWhatItSays(command, args){
 ```
 
 
-### 1. **node liri.js my-tweets**
+### 1. `node liri.js my-tweets`
 
 This will show a Twitter user's last 20 tweets and when they were created at in your terminal/bash window.
 
@@ -39,7 +39,7 @@ _(This example uses a Twitter account - QMichauxii - created for this exercise. 
 
 
 
-### 2. **node liri.js spotify-this-song 'song name here'**
+### 2. `node liri.js spotify-this-song '_song name here_'`
 
 This will show the following information about the song in your terminal/bash window:
   * Artist(s)
@@ -55,7 +55,7 @@ If no song is provided, then your program will default to
 ![Screenshot of Liri spotify-this-song NULL](screenshots/03_liri_spotify-this-song_NULL.png)  
 
 
-### 3. **node liri.js movie-this 'movie name here'**
+### 3. `node liri.js movie-this '_movie name here_'`
 
 This will output the following information to your terminal/bash window:
 
@@ -76,7 +76,7 @@ If the user doesn't type a movie in, the program will output data for the movie 
             
 
 
-### 4. **node liri.js do-what-it-says**
+### 4. `node liri.js do-what-it-says`
 
 Using the fs Node package, LIRI takes the text inside of **random.txt** (a seperate file in this directory), and then uses it to call the 'spotify-this-song' command; defaulting to the song, *"I Want it That Way."*
 
