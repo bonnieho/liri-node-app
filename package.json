@@ -80,14 +80,7 @@
       "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
       "version": "1.0.2"
     },
-    "cryptiles": {
-      "integrity": "sha1-O9/s3GCBR8HGcgL6KR59ylnqo7g=",
-      "requires": {
-        "boom": "2.x.x"
-      },
-      "resolved": "https://registry.npmjs.org/cryptiles/-/cryptiles-2.0.5.tgz",
-      "version": "2.0.5"
-    },
+    "cryptiles": "^4.1.3",
     "dashdash": {
       "dependencies": {
         "assert-plus": {
@@ -196,11 +189,7 @@
       "resolved": "https://registry.npmjs.org/hawk/-/hawk-3.1.3.tgz",
       "version": "3.1.3"
     },
-    "hoek": {
-      "integrity": "sha1-ILt0A9POo5jpHcRxCo/xuCdKJe0=",
-      "resolved": "https://registry.npmjs.org/hoek/-/hoek-2.16.3.tgz",
-      "version": "2.16.3"
-    },
+    "hoek": "^6.1.2",
     "http-signature": {
       "integrity": "sha1-33LiZwZs0Kxn+3at+OE0qPvPkb8=",
       "requires": {
@@ -211,16 +200,7 @@
       "resolved": "https://registry.npmjs.org/http-signature/-/http-signature-1.1.1.tgz",
       "version": "1.1.1"
     },
-    "imdb-api": {
-      "integrity": "sha1-7mOPbNzEbcQXMV7kXfqFd2YnWVs=",
-      "requires": {
-        "es6-promise": "^4.1.0",
-        "request": "^2.74.0",
-        "request-promise": "^4.1.1"
-      },
-      "resolved": "https://registry.npmjs.org/imdb-api/-/imdb-api-3.1.2.tgz",
-      "version": "3.1.2"
-    },
+    "imdb-api": "^4.0.2",
     "is-typedarray": {
       "integrity": "sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=",
       "resolved": "https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz",
@@ -291,15 +271,7 @@
       "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.16.tgz",
       "version": "2.1.16"
     },
-    "node-spotify-api": {
-      "integrity": "sha512-/nM5ImBjgatzdRHc3MVY+t9iynC0LpO1PEkOlfyG1ogtlny2dQ++oq9m3qLJocbEqtZxtg66w5z4DXxdlSOsSg==",
-      "requires": {
-        "request": "^2.81.0",
-        "request-promise": "^4.2.1"
-      },
-      "resolved": "https://registry.npmjs.org/node-spotify-api/-/node-spotify-api-1.0.7.tgz",
-      "version": "1.0.7"
-    },
+    "node-spotify-api": "^1.0.7",
     "oauth-sign": {
       "integrity": "sha1-Rqarfwrq2N6unsBWV4C31O/rnUM=",
       "resolved": "https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.8.2.tgz",
@@ -418,14 +390,7 @@
       "resolved": "https://registry.npmjs.org/stringstream/-/stringstream-0.0.5.tgz",
       "version": "0.0.5"
     },
-    "tough-cookie": {
-      "integrity": "sha1-8IH3bkyFcg5sN6X6ztc3FQ2EByo=",
-      "requires": {
-        "punycode": "^1.4.1"
-      },
-      "resolved": "https://registry.npmjs.org/tough-cookie/-/tough-cookie-2.3.2.tgz",
-      "version": "2.3.2"
-    },
+    "tough-cookie": "^3.0.1",
     "tunnel-agent": {
       "integrity": "sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=",
       "requires": {
@@ -439,15 +404,7 @@
       "resolved": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.5.tgz",
       "version": "0.14.5"
     },
-    "twitter": {
-      "integrity": "sha1-B2I3jx3BwFDkj2ZqypBOJLGpYvQ=",
-      "requires": {
-        "deep-extend": "^0.5.0",
-        "request": "^2.72.0"
-      },
-      "resolved": "https://registry.npmjs.org/twitter/-/twitter-1.7.1.tgz",
-      "version": "1.7.1"
-    },
+    "twitter": "^1.7.1",
     "uuid": {
       "integrity": "sha512-DIWtzUkw04M4k3bf1IcpS2tngXEL26YUD2M0tMDUpnUrz2hgzUBlD55a4FjdLGPvfHxS6uluGWvaVEqgBcVa+g==",
       "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.1.0.tgz",

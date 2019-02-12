@@ -140,3 +140,67 @@ AND it's still raining cats and dogs. Four straight days now.
 Sun Aug 27 06:05:12 +0000 2017
 It's raining cats and dogs right now!
 
+
+my-tweets
+
+Tue Jan 01 04:18:54 +0000 2019
+Get it free: Free: Ultimate Coding Bundle https://t.co/tmVdxrIaG1 via @StackSocial
+
+Tue Aug 29 15:44:34 +0000 2017
+AND it's still raining cats and dogs. Four straight days now.
+
+Sun Aug 27 06:05:12 +0000 2017
+It's raining cats and dogs right now!
+
+
+spotify-this-song Son of a son of a Sailor
+
+Artist(s): Jimmy Buffett
+Title: Son Of A Son Of A Sailor
+(This song does not appear to have a URL in Spotify!)
+Album: Son Of A Son Of A Sailor
+
+
+spotify-this-song
+
+Since you didn't specify a song title, then you're stuck with this one:
+
+Artist: Ace of Base
+Title: The Sign
+Song URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=4a98a7e0b8314a74a5e7de8af60df353
+Album: The Sign (US Album) [Remastered]
+
+
+movie-this Big
+
+Movie Title: Big
+Release Year: 1988
+IMDB Rating: 7.3
+Country of Origin: USA
+Language: English
+Plot: After wishing to be made big, a teenage boy wakes the next morning to find himself mysteriously in the body of an adult.
+Actors: Tom Hanks, Elizabeth Perkins, Robert Loggia, John Heard
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/big/
+
+
+movie-this
+
+Since you didn't specify a movie title, then you're stuck with this one:
+
+Movie Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.8
+Country of Origin: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+Rotten Tomatoes URL: http://www.rottentomatoes.com/m/mr-nobody/
+
+
+do-what-it-says
+
+Artist(s): Backstreet Boys
+Title: I Want It That Way
+Song URL: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=4a98a7e0b8314a74a5e7de8af60df353
+Album: The Hits--Chapter One
+
