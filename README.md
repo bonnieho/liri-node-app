@@ -37,7 +37,7 @@ _(This example uses a Twitter account - QMichauxii - created for this exercise. 
 
 ![Screenshot of Liri my-tweets](screenshots/01_liri_my-tweets.png)  
 
-
+*(HISTORICAL NOTE: This app was created as Hurricane Harvey was situated directly over the southeast Texas coast, hence the Twitter referneces to the massive amounts of rain that were falling at the time!)*
 
 ### 2. `node liri.js spotify-this-song '`*song name here*`'`
 
@@ -112,6 +112,34 @@ appendToLog("\n" + nodeArgs.slice(2).join(" ") + "\n");
 ```
 
 ![Screenshot of Liri all commands log.txt](screenshots/08_liri_all_commands_logtxt.png) 
+
+- - -
+
+### In case you're interested...
+
+#### Local Environment Setup
+
+To use this version of "LIRI Bot" from your own local environment, here's what you've got to do:
+
+**Step 1 - Clone this repo in the command line below using the following text:**
+```
+git clone https://github.com/bonnieho/liri-node-app.git
+```
+**Step 2 - In you local directory structure, navigate into the newly cloned repo directory:**
+```
+cd liri-node-app
+```
+**Step 3 - Install the required NPM packages using the following command:**
+```
+npm install
+```
+**Step 4 - Start the application server using the following command:**
+```
+node server.js my-tweets
+node server.js spotify-this-song 'song name here'
+node server.js movie-this 'movie name here' - OR -
+node server.js do-what-it-says
+```
 
 - - -
 
