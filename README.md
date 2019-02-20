@@ -37,7 +37,7 @@ _(This example uses a Twitter account - QMichauxii - created for this exercise. 
 
 ![Screenshot of Liri my-tweets](screenshots/01_liri_my-tweets.png)  
 
-*(HISTORICAL NOTE: This app was created as Hurricane Harvey was situated directly over the southeast Texas coast, hence the Twitter referneces to the massive amounts of rain that were falling at the time!)*
+*(HISTORICAL NOTE: This app was created as Hurricane Harvey was situated directly over the southeast Texas coast, hence the Twitter references to the massive amounts of rain that were falling at the time!)*
 
 ### 2. `node liri.js spotify-this-song '`*song name here*`'`
 
@@ -133,7 +133,7 @@ cd liri-node-app
 ```
 npm install
 ```
-**Step 4 - Start the application server using the following command:**
+**Step 4 - Start the application server using ANY of the following commands:**
 ```
 node server.js my-tweets
 node server.js spotify-this-song 'song name here'
